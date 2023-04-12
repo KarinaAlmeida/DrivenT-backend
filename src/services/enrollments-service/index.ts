@@ -18,8 +18,8 @@ async function getAddressFromCEP({ cep }: QueryCep) {
 
   if (result.data.erro) throw invalidCepError();
 
-  if (!result.data) {
-    throw notFoundError();
+  if (!result.data || result.data.erro) {
+    throw notFoundError(); // lança um erro para quem chamou essa função!
   }
   const { logradouro, complemento, bairro, localidade: cidade, uf } = result.data as ViaCEPAddress;
 
