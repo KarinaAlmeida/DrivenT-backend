@@ -28,6 +28,16 @@ export type RequestError = {
   message: string;
 };
 
-export type QueryCep = {
-  cep?: string;
-};
+// export type QueryCep = {
+//   cep?: string;
+// };
+
+// export type TicketType = {
+//   id: number;
+//   name: string;
+//   price: number;
+//   isRemote: boolean;
+//   includesHotel: boolean;
+//   createdAt: Date;
+//   updatedAt: Date;
+// };
