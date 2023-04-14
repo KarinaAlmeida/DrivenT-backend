@@ -7,14 +7,18 @@ async function getType(): Promise<TicketType[]> {
   return result;
 }
 
-async function getTickets(id_user: number): Promise<
-  Ticket & {
-    TicketType: TicketType;
-  }
-> {
-  const enrollmentId = await enrollmentRepository.findWithAddressByUserId(id_user);
+async function getTickets(id: number): Promise<Ticket & { TicketType: TicketType }> {
+  const enrollmentId = await enrollmentRepository.findWithAddressByUserId(id);
   if (!enrollmentId) throw new Error();
   const tickets = await ticketRepository.getTickets(enrollmentId.id);
+  if (!tickets) throw new Error();
+  return tickets;
+}
+
+async function postTicket(id: number, ticketTypeId: number): Promise<Ticket & { TicketType: TicketType }> {
+  const enrollmentId = await enrollmentRepository.findWithAddressByUserId(id);
+  if (!enrollmentId) throw new Error();
+  const tickets = await ticketRepository.postTicket(enrollmentId.id, ticketTypeId);
   if (!tickets) throw new Error();
   return tickets;
 }
@@ -22,6 +26,7 @@ async function getTickets(id_user: number): Promise<
 const ticketsService = {
   getType,
   getTickets,
+  postTicket,
 };
 
 export default ticketsService;
