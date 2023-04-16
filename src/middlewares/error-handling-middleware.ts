@@ -26,13 +26,13 @@ export function handleApplicationErrors(
     });
   }
 
-  if (err.name === 'UnauthorizedError') {
+  if (err.name === 'UnauthorizedError' || err.name === 'UnrelatedTicket') {
     return res.status(httpStatus.UNAUTHORIZED).send({
       message: err.message,
     });
   }
 
-  if (err.name === 'NotFoundError') {
+  if (err.name === 'NotFoundError' || err.name === 'TicketNotFound') {
     return res.status(httpStatus.NOT_FOUND).send({
       message: err.message,
     });

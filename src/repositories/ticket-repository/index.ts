@@ -21,6 +21,7 @@ async function getTickets(enrollmentId: number): Promise<
 async function postTicket(
   enrollmentId: number,
   ticketTypeId: number,
+  status: TicketStatus,
   id?: number,
 ): Promise<Ticket & { TicketType: TicketType }> {
   const createTicket = prisma.ticket.upsert({
@@ -30,10 +31,10 @@ async function postTicket(
     create: {
       ticketTypeId,
       enrollmentId,
-      status: TicketStatus.RESERVED,
+      status,
     },
     update: {
-      status: TicketStatus.RESERVED,
+      status,
     },
     include: {
       TicketType: true,
