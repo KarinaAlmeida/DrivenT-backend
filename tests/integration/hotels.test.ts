@@ -12,7 +12,7 @@ beforeAll(async () => {
   await init();
 });
 
-beforeAll(async () => {
+beforeEach(async () => {
   await cleanDb();
 });
 
@@ -67,18 +67,20 @@ describe('GET /hotels', () => {
       expect(response.status).toBe(httpStatus.NOT_FOUND);
     });
 
-    //   it ( "should respond with 402 when ticket is not paid", async () =>{
+    // it ( "should respond with 402 when ticket is not paid", async () =>{
 
-    //   })
+    // })
 
-    //   it ( "should respond with 402 when ticket is remote", async () =>{
+    // it ( "should respond with 402 when ticket is remote", async () =>{
 
-    //   })
+    // })
 
-    //   it ( "should respond with 402 when ticket doesn't includes hotel", async () =>{
+    // it ( "should respond with 402 when ticket doesn't includes hotel", async () =>{
 
-    //   })
+    // })
 
-    //   it ("should respond with 200 and hotels")
+    // it ("should respond with 200 and hotels", async () =>{
+
+    // })
   });
 });

@@ -6,10 +6,13 @@ import ticketRepository from '@/repositories/ticket-repository';
 import { paymentRequired } from '@/errors/payment-required-error';
 
 async function getHotels(id: number): Promise<Hotel[]> {
+  console.log('oi');
   const enrollment = await enrollmentRepository.findWithAddressByUserId(id);
+  console.log(enrollment, 'enrollment console');
   if (!enrollment) throw notFoundError();
 
   const ticket = await ticketRepository.getTickets(enrollment.id);
+  console.log(ticket, 'console ticket');
   if (!ticket) throw notFoundError();
 
   if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
