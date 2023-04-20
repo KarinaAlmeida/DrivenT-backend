@@ -26,6 +26,12 @@ export function handleApplicationErrors(
     });
   }
 
+  if (err.name === 'PaymentRequired') {
+    return res.status(httpStatus.PAYMENT_REQUIRED).send({
+      message: err.message,
+    });
+  }
+
   if (err.name === 'UnauthorizedError' || err.name === 'UnrelatedTicket') {
     return res.status(httpStatus.UNAUTHORIZED).send({
       message: err.message,

@@ -48,3 +48,7 @@ export type PaymentObj = {
     cvv: number;
   };
 };
+
+export type hotelId = {
+  hotelId: string;
+};
