@@ -50,11 +50,35 @@ describe('GET /hotels', () => {
       expect(response.status).toBe(httpStatus.NOT_FOUND);
     });
 
-    //   it ("should respond with 404 when there is not ticket", async () => {
-    //     const enrollment = await createUser();
-    //     const response = await server.get('/hotels');
+    it('should respond with 404 when there is not ticket', async () => {
+      const user = await createUser();
+      await createEnrollmentWithAddress(user);
+      const token = await generateValidToken(user);
 
-    //     expect(response.status).toBe(httpStatus.NOT_FOUND);
+      const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
+
+      expect(response.status).toBe(httpStatus.NOT_FOUND);
+    });
+
+    it('should respond with 404 when no hotel was found', async () => {
+      const token = await generateValidToken();
+      const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
+
+      expect(response.status).toBe(httpStatus.NOT_FOUND);
+    });
+
+    //   it ( "should respond with 402 when ticket is not paid", async () =>{
+
     //   })
+
+    //   it ( "should respond with 402 when ticket is remote", async () =>{
+
+    //   })
+
+    //   it ( "should respond with 402 when ticket doesn't includes hotel", async () =>{
+
+    //   })
+
+    //   it ("should respond with 200 and hotels")
   });
 });

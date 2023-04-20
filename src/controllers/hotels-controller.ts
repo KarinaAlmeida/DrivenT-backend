@@ -7,7 +7,7 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
   const id = req.userId;
   try {
     const hotels = hotelsService.getHotels(id);
-    res.send(hotels);
+    res.status(httpStatus.OK).send(hotels);
   } catch (error) {
     return res.sendStatus(httpStatus.BAD_REQUEST);
   }
@@ -18,7 +18,7 @@ export async function getHotelRooms(req: AuthenticatedRequest, res: Response) {
     const id = req.userId;
     const { hotelId } = req.params;
     const hotels = hotelsService.getHotelRooms(parseInt(hotelId), id);
-    res.send(hotels);
+    res.status(httpStatus.OK).send(hotels);
   } catch (error) {
     return res.sendStatus(httpStatus.BAD_REQUEST);
   }
