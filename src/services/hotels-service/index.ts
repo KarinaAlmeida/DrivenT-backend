@@ -9,7 +9,7 @@ import { paymentRequired } from '@/errors/payment-required-error';
 
 // }
 
-async function getHotels(id: number): Promise<Hotel> {
+async function getHotels(id: number): Promise<Hotel[]> {
   const enrollment = await enrollmentRepository.findById(id);
   if (!enrollment) throw notFoundError();
 
