@@ -17,9 +17,10 @@ async function getHotelRooms(req: AuthenticatedRequest, res: Response, next: Nex
   try {
     const id = req.userId;
     const { hotelId } = req.params;
-    const hotels = await hotelsService.getHotelRooms(parseInt(hotelId), id);
+    const hotels = await hotelsService.getHotelRooms(id, parseInt(hotelId));
     return res.status(httpStatus.OK).send(hotels);
   } catch (error) {
+    console.log(error);
     next(error);
   }
 }
