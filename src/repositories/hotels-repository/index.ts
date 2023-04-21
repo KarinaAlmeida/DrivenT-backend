@@ -5,7 +5,6 @@ async function getHotels() {
 }
 
 async function getHotelRooms(hotelId: number) {
-  console.log(hotelId);
   return prisma.hotel.findFirst({
     where: { id: hotelId },
     include: {

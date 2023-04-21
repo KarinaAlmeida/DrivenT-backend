@@ -224,32 +224,29 @@ describe('GET /hotels/:hotelId', () => {
         },
       });
       const payment = await createPayment(ticket.id, ticketType.price);
-
-      const result = await server.get('/hotels/${hotels.id}').set({
+      const result = await server.get(`/hotels/${hotels.id}`).set({
         Authorization: `Bearer ${token}`,
       });
 
       expect(result.status).toBe(httpStatus.OK);
 
-      expect(result.body).toEqual([
-        {
-          id: hotels.id,
-          name: hotels.name,
-          image: hotels.image,
-          createdAt: hotels.createdAt.toISOString(),
-          updatedAt: hotels.updatedAt.toISOString(),
-          Rooms: [
-            {
-              id: rooms.id,
-              name: rooms.name,
-              capacity: rooms.capacity,
-              hotelId: hotels.id,
-              createdAt: rooms.createdAt.toISOString(),
-              updatedAt: rooms.updatedAt.toISOString(),
-            },
-          ],
-        },
-      ]);
+      expect(result.body).toEqual({
+        id: hotels.id,
+        name: hotels.name,
+        image: hotels.image,
+        createdAt: hotels.createdAt.toISOString(),
+        updatedAt: hotels.updatedAt.toISOString(),
+        Rooms: [
+          {
+            id: rooms.id,
+            name: rooms.name,
+            capacity: rooms.capacity,
+            hotelId: hotels.id,
+            createdAt: rooms.createdAt.toISOString(),
+            updatedAt: rooms.updatedAt.toISOString(),
+          },
+        ],
+      });
     });
 
     it('should respond with 404 when there is no enrollment', async () => {
