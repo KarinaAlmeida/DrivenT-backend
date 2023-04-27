@@ -15,8 +15,13 @@ async function getBooking(req: AuthenticatedRequest, res: Response, next: NextFu
 
 async function postBooking(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {
-    const booking = await bookingService.postBooking();
-    return res.status(httpStatus.OK).send(booking);
+    const id = req.userId;
+    const { roomId } = req.body;
+    if (!roomId) return res.status(httpStatus.BAD_REQUEST);
+
+    const bookingId = await bookingService.postBooking(id, parseInt(roomId));
+
+    return res.status(httpStatus.OK).send(bookingId);
   } catch (error) {
     next(error);
   }
@@ -24,8 +29,15 @@ async function postBooking(req: AuthenticatedRequest, res: Response, next: NextF
 
 async function updateBooking(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {
-    const booking = await bookingService.updateBooking();
-    return res.status(httpStatus.OK).send(booking);
+    const id = req.userId;
+    const { roomId } = req.body;
+    const { bookingId } = req.params;
+
+    if (!roomId) return res.status(httpStatus.BAD_REQUEST);
+    if (!bookingId) return res.status(httpStatus.BAD_REQUEST);
+
+    const booking = await bookingService.updateBooking(id, parseInt(roomId), parseInt(bookingId));
+    return res.status(httpStatus.OK).send({ bookingId: booking });
   } catch (error) {
     next(error);
   }

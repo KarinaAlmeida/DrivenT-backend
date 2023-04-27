@@ -5,7 +5,7 @@ import { notFoundError } from '@/errors';
 import ticketRepository from '@/repositories/ticket-repository';
 import { forbiddenError } from '@/errors/forbidden-required-error';
 
-async function getHotels(id: number): Promise<Hotel[]> {
+async function ticketAndPayment(id: number) {
   const enrollment = await enrollmentRepository.findWithAddressByUserId(id);
   if (!enrollment) throw notFoundError();
 
@@ -14,6 +14,12 @@ async function getHotels(id: number): Promise<Hotel[]> {
 
   if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
     throw forbiddenError();
+
+  return [enrollment, ticket];
+}
+
+async function getHotels(id: number): Promise<Hotel[]> {
+  await ticketAndPayment(id);
 
   const hotel = await hotelsRepository.getHotels();
   if (!hotel || hotel.length === 0) throw notFoundError();
@@ -22,13 +28,7 @@ async function getHotels(id: number): Promise<Hotel[]> {
 }
 
 async function getHotelRooms(id: number, hotelId: number): Promise<Hotel & { Rooms: Room[] }> {
-  const enrollment = await enrollmentRepository.findWithAddressByUserId(id);
-  if (!enrollment) throw notFoundError();
-  const ticket = await ticketRepository.getTickets(enrollment.id);
-  if (!ticket) throw notFoundError();
-
-  if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
-    throw forbiddenError();
+  await ticketAndPayment(id);
 
   const rooms = await hotelsRepository.getHotelRooms(hotelId);
   if (!rooms) throw notFoundError();
@@ -39,6 +39,7 @@ async function getHotelRooms(id: number, hotelId: number): Promise<Hotel & { Roo
 const hotelsService = {
   getHotels,
   getHotelRooms,
+  ticketAndPayment,
 };
 
 export default hotelsService;
