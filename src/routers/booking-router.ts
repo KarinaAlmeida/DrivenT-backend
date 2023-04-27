@@ -4,6 +4,10 @@ import bookingController from '@/controllers/booking-controller';
 
 const bookingRouter = Router();
 
-bookingRouter.all('/*', authenticateToken).get('/', bookingController.getBooking).post('/').put('/:bookingId');
+bookingRouter
+  .all('/*', authenticateToken)
+  .get('/', bookingController.getBooking)
+  .post('/', bookingController.postBooking)
+  .put('/:bookingId', bookingController.updateBooking);
 
 export { bookingRouter };

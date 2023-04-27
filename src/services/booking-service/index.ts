@@ -32,7 +32,6 @@ async function postBooking(id: number, roomId: number) {
 }
 
 async function updateBooking(id: number, roomId: number, bookingId: number) {
-  await hotelsService.ticketAndPayment(id);
   const hasBooking = await bookingRepository.getBooking(id);
   if (!hasBooking) throw forbiddenError();
 

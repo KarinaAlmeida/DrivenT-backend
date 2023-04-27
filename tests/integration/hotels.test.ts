@@ -3,7 +3,13 @@ import * as jwt from 'jsonwebtoken';
 import supertest from 'supertest';
 import faker from '@faker-js/faker';
 import { TicketStatus } from '.prisma/client';
-import { createEnrollmentWithAddress, createUser, createTicket, createPayment } from '../factories';
+import {
+  createEnrollmentWithAddress,
+  createUser,
+  createTicket,
+  createPayment,
+  createTicketTypeWithHotel,
+} from '../factories';
 import { cleanDb, generateValidToken } from '../helpers';
 import { prisma } from '@/config';
 
