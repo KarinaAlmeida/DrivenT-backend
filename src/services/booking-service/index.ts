@@ -1,23 +1,16 @@
+import { Room } from '@prisma/client';
 import bookingRepository from '@/repositories/booking-repository';
-import enrollmentRepository from '@/repositories/enrollment-repository';
+// import enrollmentRepository from '@/repositories/enrollment-repository';
 import { notFoundError } from '@/errors';
-import ticketRepository from '@/repositories/ticket-repository';
-import { paymentRequired } from '@/errors/payment-required-error';
+// import ticketRepository from '@/repositories/ticket-repository';
+import { forbiddenError } from '@/errors/forbidden-required-error';
 
-async function getBooking(id: number) {
-  const enrollment = await enrollmentRepository.findWithAddressByUserId(id);
-  if (!enrollment) throw notFoundError();
+async function getBooking(id: number): Promise<{ Room: Room; id: number }> {
+  const bookings = await bookingRepository.getBooking(id);
 
-  const ticket = await ticketRepository.getTickets(enrollment.id);
-  if (!ticket) throw notFoundError();
+  if (!bookings) throw notFoundError();
 
-  if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
-    throw paymentRequired();
-
-  const booking = await bookingRepository.getBooking();
-  if (!booking || booking.length === 0) throw notFoundError();
-
-  return booking;
+  return bookings;
 }
 
 async function postBooking() {

@@ -26,8 +26,8 @@ export function handleApplicationErrors(
     });
   }
 
-  if (err.name === 'PaymentRequired') {
-    return res.status(httpStatus.PAYMENT_REQUIRED).send({
+  if (err.name === 'forbiddenError') {
+    return res.status(httpStatus.FORBIDDEN).send({
       message: err.message,
     });
   }

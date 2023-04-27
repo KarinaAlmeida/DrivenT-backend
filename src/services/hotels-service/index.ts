@@ -3,7 +3,7 @@ import hotelsRepository from '@/repositories/hotels-repository';
 import enrollmentRepository from '@/repositories/enrollment-repository';
 import { notFoundError } from '@/errors';
 import ticketRepository from '@/repositories/ticket-repository';
-import { paymentRequired } from '@/errors/payment-required-error';
+import { forbiddenError } from '@/errors/forbidden-required-error';
 
 async function getHotels(id: number): Promise<Hotel[]> {
   const enrollment = await enrollmentRepository.findWithAddressByUserId(id);
@@ -13,7 +13,7 @@ async function getHotels(id: number): Promise<Hotel[]> {
   if (!ticket) throw notFoundError();
 
   if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
-    throw paymentRequired();
+    throw forbiddenError();
 
   const hotel = await hotelsRepository.getHotels();
   if (!hotel || hotel.length === 0) throw notFoundError();
@@ -28,7 +28,7 @@ async function getHotelRooms(id: number, hotelId: number): Promise<Hotel & { Roo
   if (!ticket) throw notFoundError();
 
   if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote === true || ticket.status === 'RESERVED')
-    throw paymentRequired();
+    throw forbiddenError();
 
   const rooms = await hotelsRepository.getHotelRooms(hotelId);
   if (!rooms) throw notFoundError();

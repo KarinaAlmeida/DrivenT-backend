@@ -107,7 +107,7 @@ describe('GET /hotels', () => {
       expect(response.status).toBe(httpStatus.NOT_FOUND);
     });
 
-    it('should respond with 402 when ticket is not paid', async () => {
+    it('should respond with 403 when ticket is not paid', async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -124,10 +124,10 @@ describe('GET /hotels', () => {
 
       const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
 
-    it('should respond with 402 when ticket is remote', async () => {
+    it('should respond with 403 when ticket is remote', async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -144,10 +144,10 @@ describe('GET /hotels', () => {
 
       const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
 
-    it("should respond with 402 when ticket doesn't includes hotel", async () => {
+    it("should respond with 403 when ticket doesn't includes hotel", async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -164,7 +164,7 @@ describe('GET /hotels', () => {
 
       const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
   });
 });
@@ -273,7 +273,7 @@ describe('GET /hotels/:hotelId', () => {
       expect(response.status).toBe(httpStatus.NOT_FOUND);
     });
 
-    it('should respond with 402 when ticket is not paid', async () => {
+    it('should respond with 403 when ticket is not paid', async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -290,10 +290,10 @@ describe('GET /hotels/:hotelId', () => {
 
       const response = await server.get('/hotels/1').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
 
-    it('should respond with 402 when ticket is remote', async () => {
+    it('should respond with 403 when ticket is remote', async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -310,10 +310,10 @@ describe('GET /hotels/:hotelId', () => {
 
       const response = await server.get('/hotels/1').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
 
-    it("should respond with 402 when ticket doesn't includes hotel", async () => {
+    it("should respond with 403 when ticket doesn't includes hotel", async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
       const enrollment = await createEnrollmentWithAddress(user);
@@ -330,7 +330,7 @@ describe('GET /hotels/:hotelId', () => {
 
       const response = await server.get('/hotels/1').set('Authorization', `Bearer ${token}`);
 
-      expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
+      expect(response.status).toEqual(httpStatus.FORBIDDEN);
     });
   }); //fim do describe interno
 }); //fim do describe principal
