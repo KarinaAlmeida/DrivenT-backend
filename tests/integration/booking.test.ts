@@ -287,7 +287,7 @@ describe('PUT /booking/:bookingId', () => {
       const enrollment = await createEnrollmentWithAddress(user);
       const hotelTicket = await createTicketTypeWithHotel();
       await createTicket(enrollment.id, hotelTicket.id, 'PAID');
-      const response = await server.post('/booking').set('Authorization', `Bearer ${token}`).send({});
+      const response = await server.put('/booking/1').set('Authorization', `Bearer ${token}`).send({});
 
       expect(response.status).toBe(httpStatus.BAD_REQUEST);
     });
@@ -324,6 +324,25 @@ describe('PUT /booking/:bookingId', () => {
       const result = await server.put('/booking/1').set('Authorization', `Bearer ${token}`).send({ roomId: room.id });
 
       expect(result.status).toBe(httpStatus.FORBIDDEN);
+    });
+
+    it('Should respond with status 404 if room doesnt exist', async () => {
+      const user = await createUser();
+      const token = await generateValidToken(user);
+      const enrollment = await createEnrollmentWithAddress(user);
+      const ticketType = await createTicketTypeWithHotel();
+      const ticket = await createTicket(enrollment.id, ticketType.id, 'PAID');
+      await createPayment(ticket.id, ticketType.price);
+      const hotel = await createHotel();
+      const room = await createRooms(hotel.id);
+      const booking = await createBooking(user.id, room.id);
+
+      const result = await server
+        .put(`/booking/${booking.id}`)
+        .set('Authorization', `Bearer ${token}`)
+        .send({ roomId: 456 });
+
+      expect(result.status).toBe(httpStatus.NOT_FOUND);
     });
   });
 });
