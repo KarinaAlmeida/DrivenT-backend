@@ -28,15 +28,17 @@ async function postBooking(id: number, roomId: number) {
   await roomAvailable(roomId);
 
   const booking = await bookingRepository.postBooking(id, roomId);
-  return booking;
+  return booking.id;
 }
 
 async function updateBooking(id: number, roomId: number, bookingId: number) {
   const hasBooking = await bookingRepository.getBooking(id);
   if (!hasBooking) throw forbiddenError();
 
+  await roomAvailable(roomId);
+
   const booking = await bookingRepository.updateBooking(id, roomId, bookingId);
-  return booking;
+  return booking.id;
 }
 
 const bookingService = {

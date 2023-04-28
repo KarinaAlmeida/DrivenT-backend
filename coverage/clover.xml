@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682620529799" clover="3.2.0">
-  <project timestamp="1682620529799" name="All files">
-    <metrics statements="626" coveredstatements="552" conditionals="99" coveredconditionals="66" methods="109" coveredmethods="89" elements="834" coveredelements="707" complexity="0" loc="626" ncloc="626" packages="27" files="72" classes="72"/>
+<coverage generated="1682627366019" clover="3.2.0">
+  <project timestamp="1682627366020" name="All files">
+    <metrics statements="631" coveredstatements="577" conditionals="99" coveredconditionals="74" methods="112" coveredmethods="97" elements="842" coveredelements="748" complexity="0" loc="631" ncloc="631" packages="27" files="72" classes="72"/>
     <package name="src">
       <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="app.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/app.ts">
@@ -52,7 +52,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="127" coveredstatements="104" conditionals="9" coveredconditionals="5" methods="16" coveredmethods="14"/>
+      <metrics statements="127" coveredstatements="111" conditionals="9" coveredconditionals="6" methods="16" coveredmethods="15"/>
       <file name="authentication-controller.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="11" type="stmt"/>
@@ -65,21 +65,21 @@
         <line num="13" count="3" type="stmt"/>
       </file>
       <file name="booking-controller.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/controllers/booking-controller.ts">
-        <metrics statements="25" coveredstatements="9" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <metrics statements="25" coveredstatements="14" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="4" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
@@ -93,15 +93,15 @@
         <line num="52" count="11" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/controllers/enrollments-controller.ts">
-        <metrics statements="20" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
         <line num="18" count="11" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
@@ -126,20 +126,20 @@
         <line num="10" count="1" type="stmt"/>
       </file>
       <file name="hotels-controller.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/controllers/hotels-controller.ts">
-        <metrics statements="15" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
         <line num="27" count="11" type="stmt"/>
         <line num="32" count="11" type="stmt"/>
       </file>
@@ -154,20 +154,20 @@
         <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="cond" truecount="3" falsecount="0"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="7" type="cond" truecount="3" falsecount="0"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
         <line num="33" count="11" type="stmt"/>
         <line num="38" count="11" type="stmt"/>
       </file>
@@ -209,11 +209,11 @@
       </file>
     </package>
     <package name="src.errors">
-      <metrics statements="27" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
+      <metrics statements="27" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8"/>
       <file name="cannot-enroll-before-start-date-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/cannot-enroll-before-start-date-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
       <file name="conflict-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/conflict-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -223,7 +223,7 @@
       <file name="forbidden-required-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/forbidden-required-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -238,7 +238,7 @@
       <file name="invalid-data-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/invalid-data-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
       <file name="invalid-email-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/invalid-email-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -248,7 +248,7 @@
       <file name="not-found-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/not-found-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
       </file>
       <file name="request-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/request-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -263,16 +263,16 @@
       <file name="unauthorized-error.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/unauthorized-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="38" type="stmt"/>
+        <line num="4" count="36" type="stmt"/>
       </file>
       <file name="unrelatedTicket.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/errors/unrelatedTicket.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="49" coveredstatements="40" conditionals="18" coveredconditionals="12" methods="8" coveredmethods="7"/>
+      <metrics statements="49" coveredstatements="41" conditionals="18" coveredconditionals="13" methods="8" coveredmethods="7"/>
       <file name="authentication-middleware.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/middlewares/authentication-middleware.ts">
         <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
@@ -280,35 +280,35 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
-        <line num="9" count="69" type="stmt"/>
-        <line num="10" count="69" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="57" type="stmt"/>
-        <line num="13" count="57" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="57" type="stmt"/>
-        <line num="16" count="57" type="stmt"/>
-        <line num="18" count="45" type="stmt"/>
-        <line num="23" count="45" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="31" type="stmt"/>
-        <line num="27" count="31" type="stmt"/>
+        <line num="9" count="81" type="stmt"/>
+        <line num="10" count="81" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="69" type="stmt"/>
+        <line num="13" count="69" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="69" type="stmt"/>
+        <line num="16" count="69" type="stmt"/>
+        <line num="18" count="57" type="stmt"/>
+        <line num="23" count="57" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="45" type="stmt"/>
+        <line num="27" count="45" type="stmt"/>
         <line num="29" count="12" type="stmt"/>
-        <line num="34" count="38" type="stmt"/>
+        <line num="34" count="36" type="stmt"/>
       </file>
       <file name="error-handling-middleware.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/middlewares/error-handling-middleware.ts">
-        <metrics statements="18" coveredstatements="10" conditionals="13" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <metrics statements="18" coveredstatements="11" conditionals="13" coveredconditionals="9" methods="1" coveredmethods="1"/>
         <line num="2" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
-        <line num="11" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="21" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="17" count="10" type="cond" truecount="2" falsecount="1"/>
+        <line num="17" count="21" type="cond" truecount="2" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="23" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="21" type="cond" truecount="0" falsecount="1"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="29" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="35" count="8" type="cond" truecount="2" falsecount="1"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="41" count="8" type="cond" truecount="3" falsecount="0"/>
-        <line num="42" count="8" type="stmt"/>
+        <line num="29" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="35" count="13" type="cond" truecount="3" falsecount="0"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="41" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="42" count="11" type="stmt"/>
         <line num="47" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="48" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
@@ -329,10 +329,10 @@
         <line num="10" count="11" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="15" count="44" type="stmt"/>
-        <line num="16" count="24" type="stmt"/>
-        <line num="20" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="23" type="stmt"/>
+        <line num="20" count="23" type="cond" truecount="2" falsecount="0"/>
         <line num="21" count="16" type="stmt"/>
-        <line num="23" count="24" type="stmt"/>
+        <line num="23" count="18" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.address-repository">
@@ -352,7 +352,7 @@
         <line num="2" count="11" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="53" count="11" type="stmt"/>
@@ -364,7 +364,7 @@
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/repositories/enrollment-repository/index.ts">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
-        <line num="5" count="15" type="stmt"/>
+        <line num="5" count="25" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -382,12 +382,12 @@
       </file>
     </package>
     <package name="src.repositories.hotels-repository">
-      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/repositories/hotels-repository/index.ts">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="16" count="11" type="stmt"/>
         <line num="21" count="11" type="stmt"/>
       </file>
@@ -397,9 +397,9 @@
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/repositories/payment-repository/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
         <line num="37" count="11" type="stmt"/>
         <line num="43" count="11" type="stmt"/>
       </file>
@@ -420,9 +420,9 @@
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="43" count="3" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
         <line num="46" count="11" type="stmt"/>
         <line num="52" count="11" type="stmt"/>
       </file>
@@ -432,11 +432,11 @@
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/repositories/user-repository/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
-        <line num="5" count="12" type="stmt"/>
-        <line num="11" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="11" count="11" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="9" type="stmt"/>
-        <line num="15" count="12" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="24" count="11" type="stmt"/>
         <line num="29" count="11" type="stmt"/>
       </file>
@@ -460,7 +460,7 @@
         <line num="3" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
         <line num="7" count="11" type="stmt"/>
-        <line num="9" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
       </file>
       <file name="enrollments-router.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/routers/enrollments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -609,9 +609,9 @@
       </file>
     </package>
     <package name="src.services.booking-service">
-      <metrics statements="23" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
+      <metrics statements="22" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="2"/>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/services/booking-service/index.ts">
-        <metrics statements="23" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
+        <metrics statements="22" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
@@ -621,26 +621,25 @@
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="21" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="43" count="11" type="stmt"/>
-        <line num="49" count="11" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
+        <line num="48" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.enrollments-service">
-      <metrics statements="28" coveredstatements="21" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="4"/>
+      <metrics statements="28" coveredstatements="26" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/services/enrollments-service/index.ts">
-        <metrics statements="28" coveredstatements="21" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="4"/>
+        <metrics statements="28" coveredstatements="26" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="5"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
@@ -654,11 +653,11 @@
         <line num="26" count="3" type="stmt"/>
         <line num="30" count="2" type="stmt"/>
         <line num="32" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="46" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="46" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="48" count="1" type="stmt"/>
         <line num="54" count="2" type="stmt"/>
         <line num="55" count="2" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
@@ -684,61 +683,61 @@
         <line num="11" count="1" type="stmt"/>
         <line num="17" count="9" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="24" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="27" count="11" type="stmt"/>
         <line num="32" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.hotels-service">
-      <metrics statements="22" coveredstatements="15" conditionals="10" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <metrics statements="22" coveredstatements="19" conditionals="10" coveredconditionals="6" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/services/hotels-service/index.ts">
-        <metrics statements="22" coveredstatements="15" conditionals="10" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <metrics statements="22" coveredstatements="19" conditionals="10" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="10" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="2" type="cond" truecount="2" falsecount="2"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="10" count="17" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="36" count="0" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="1" type="stmt"/>
         <line num="39" count="11" type="stmt"/>
         <line num="45" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services.payment-service">
-      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/services/payment-service/index.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
         <line num="32" count="11" type="stmt"/>
         <line num="37" count="11" type="stmt"/>
       </file>
@@ -782,15 +781,15 @@
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
         <line num="9" count="9" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="1" type="stmt"/>
         <line num="28" count="9" type="stmt"/>
         <line num="29" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="6" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
         <line num="40" count="11" type="stmt"/>
         <line num="41" count="11" type="stmt"/>
@@ -801,10 +800,10 @@
       <file name="prisma-utils.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/utils/prisma-utils.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
-        <line num="2" count="9" type="stmt"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="9" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
       </file>
       <file name="request.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/src/utils/request.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -827,36 +826,36 @@
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
-        <line num="9" count="72" type="stmt"/>
-        <line num="10" count="72" type="stmt"/>
-        <line num="11" count="72" type="stmt"/>
-        <line num="12" count="72" type="stmt"/>
-        <line num="13" count="70" type="stmt"/>
-        <line num="14" count="70" type="stmt"/>
-        <line num="15" count="70" type="stmt"/>
-        <line num="16" count="70" type="stmt"/>
-        <line num="17" count="64" type="stmt"/>
-        <line num="18" count="64" type="stmt"/>
-        <line num="19" count="64" type="stmt"/>
+        <line num="9" count="78" type="stmt"/>
+        <line num="10" count="78" type="stmt"/>
+        <line num="11" count="78" type="stmt"/>
+        <line num="12" count="77" type="stmt"/>
+        <line num="13" count="76" type="stmt"/>
+        <line num="14" count="76" type="stmt"/>
+        <line num="15" count="76" type="stmt"/>
+        <line num="16" count="76" type="stmt"/>
+        <line num="17" count="74" type="stmt"/>
+        <line num="18" count="74" type="stmt"/>
+        <line num="19" count="74" type="stmt"/>
         <line num="22" count="10" type="stmt"/>
-        <line num="23" count="42" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="42" type="stmt"/>
-        <line num="26" count="42" type="stmt"/>
-        <line num="28" count="42" type="stmt"/>
+        <line num="23" count="49" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="49" type="stmt"/>
+        <line num="26" count="49" type="stmt"/>
+        <line num="28" count="48" type="stmt"/>
       </file>
     </package>
     <package name="tests.factories">
-      <metrics statements="53" coveredstatements="53" conditionals="18" coveredconditionals="17" methods="12" coveredmethods="12"/>
+      <metrics statements="59" coveredstatements="59" conditionals="18" coveredconditionals="17" methods="15" coveredmethods="15"/>
       <file name="booking-factory.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/tests/factories/booking-factory.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
       </file>
       <file name="enrollments-factory.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/tests/factories/enrollments-factory.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
@@ -865,8 +864,8 @@
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
-        <line num="9" count="29" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="29" type="stmt"/>
+        <line num="9" count="34" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="34" type="stmt"/>
         <line num="35" count="10" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
       </file>
@@ -892,27 +891,33 @@
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
         <line num="15" count="10" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
       </file>
       <file name="sessions-factory.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/tests/factories/sessions-factory.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
-        <line num="6" count="42" type="stmt"/>
-        <line num="8" count="42" type="stmt"/>
+        <line num="6" count="49" type="stmt"/>
+        <line num="8" count="49" type="stmt"/>
       </file>
       <file name="tickets-factory.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/tests/factories/tickets-factory.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="1" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
         <line num="16" count="10" type="stmt"/>
-        <line num="17" count="10" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="49" count="10" type="stmt"/>
+        <line num="50" count="22" type="stmt"/>
       </file>
       <file name="users-factory.ts" path="/Users/karinaalmeida/Desktop/projeto20-DrivenT/tests/factories/users-factory.ts">
         <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -920,9 +925,9 @@
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="6" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="108" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="108" type="stmt"/>
-        <line num="10" count="108" type="stmt"/>
+        <line num="7" count="121" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="121" type="stmt"/>
+        <line num="10" count="121" type="stmt"/>
       </file>
     </package>
   </project>
