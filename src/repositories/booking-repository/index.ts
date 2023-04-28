@@ -30,16 +30,17 @@ async function getBooking(id: number): Promise<{ Room: Room; id: number }> {
 }
 
 async function postBooking(id: number, roomId: number) {
-  return prisma.booking.create({
+  const booking = await prisma.booking.create({
     data: {
       userId: id,
       roomId,
     },
   });
+  return booking.id;
 }
 
 async function updateBooking(id: number, roomId: number, bookingId: number) {
-  return prisma.booking.update({
+  const booking = await prisma.booking.update({
     where: {
       id: bookingId,
     },
@@ -48,6 +49,7 @@ async function updateBooking(id: number, roomId: number, bookingId: number) {
       userId: id,
     },
   });
+  return booking.id;
 }
 
 const bookingRepository = {

@@ -27,8 +27,7 @@ async function postBooking(id: number, roomId: number) {
   await hotelsService.ticketAndPayment(id);
   await roomAvailable(roomId);
 
-  const booking = await bookingRepository.postBooking(id, roomId);
-  return booking.id;
+  return await bookingRepository.postBooking(id, roomId);
 }
 
 async function updateBooking(id: number, roomId: number, bookingId: number) {
@@ -38,7 +37,7 @@ async function updateBooking(id: number, roomId: number, bookingId: number) {
   await roomAvailable(roomId);
 
   const booking = await bookingRepository.updateBooking(id, roomId, bookingId);
-  return booking.id;
+  return booking;
 }
 
 const bookingService = {

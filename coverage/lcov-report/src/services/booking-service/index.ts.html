@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">96.15% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/26</span>
+                <span class='fraction'>25/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40.9% </span>
+                <span class="strong">95.45% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/22</span>
+                <span class='fraction'>21/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,26 +111,34 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -138,18 +146,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
@@ -165,15 +167,15 @@ import bookingRepository from '@/repositories/booking-repository';
 import { notFoundError } from '@/errors';
 import { forbiddenError } from '@/errors/forbidden-required-error';
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >roomAvailable(</span>roomId: number) {
-  const rooms = <span class="cstat-no" title="statement not covered" >await bookingRepository.findById(roomId);</span>
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!rooms) <span class="cstat-no" title="statement not covered" >throw notFoundError();</span></span>
+async function roomAvailable(roomId: number) {
+  const rooms = await bookingRepository.findById(roomId);
+  if (!rooms) throw notFoundError();
 &nbsp;
-  const spotsReserved = <span class="cstat-no" title="statement not covered" >await bookingRepository.countSpots(roomId);</span>
+  const spotsReserved = await bookingRepository.countSpots(roomId);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (spotsReserved &gt;= rooms.capacity) <span class="cstat-no" title="statement not covered" >throw forbiddenError();</span></span>
+  if (spotsReserved &gt;= rooms.capacity) throw forbiddenError();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return rooms;</span>
+  return rooms;
 }
 &nbsp;
 async function getBooking(id: number): Promise&lt;{ Room: Room; id: number }&gt; {
@@ -181,23 +183,24 @@ async function getBooking(id: number): Promise&lt;{ Room: Room; id: number }&gt;
 &nbsp;
   if (!bookings) throw notFoundError();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return bookings;</span>
+  return bookings;
 }
 &nbsp;
 async function postBooking(id: number, roomId: number) {
   await hotelsService.ticketAndPayment(id);
-<span class="cstat-no" title="statement not covered" >  await roomAvailable(roomId);</span>
+  await roomAvailable(roomId);
 &nbsp;
-  const booking = <span class="cstat-no" title="statement not covered" >await bookingRepository.postBooking(id, roomId);</span>
-<span class="cstat-no" title="statement not covered" >  return booking;</span>
+<span class="cstat-no" title="statement not covered" > return await bookingRepository.postBooking(id, roomId);</span>
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >updateBooking(</span>id: number, roomId: number, bookingId: number) {
-  const hasBooking = <span class="cstat-no" title="statement not covered" >await bookingRepository.getBooking(id);</span>
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!hasBooking) <span class="cstat-no" title="statement not covered" >throw forbiddenError();</span></span>
+async function updateBooking(id: number, roomId: number, bookingId: number) {
+  const hasBooking = await bookingRepository.getBooking(id);
+  if (!hasBooking) throw forbiddenError();
 &nbsp;
-  const booking = <span class="cstat-no" title="statement not covered" >await bookingRepository.updateBooking(id, roomId, bookingId);</span>
-<span class="cstat-no" title="statement not covered" >  return booking;</span>
+  await roomAvailable(roomId);
+&nbsp;
+  const booking = await bookingRepository.updateBooking(id, roomId, bookingId);
+  return booking;
 }
 &nbsp;
 const bookingService = {
@@ -214,7 +217,7 @@ export default bookingService;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Apr 27 2023 17:29:25 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Apr 28 2023 15:27:45 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../../../prettify.js"></script>
         <script>
