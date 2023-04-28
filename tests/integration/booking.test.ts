@@ -163,6 +163,20 @@ describe('POST /booking', () => {
       expect(response.status).toBe(httpStatus.NOT_FOUND);
     });
 
+    it('Should respond with status 404 if room doesnt exist', async () => {
+      const user = await createUser();
+      const token = await generateValidToken(user);
+      const enrollment = await createEnrollmentWithAddress(user);
+      const ticketType = await createTicketTypeWithHotel();
+      const ticket = await createTicket(enrollment.id, ticketType.id, 'PAID');
+      await createPayment(ticket.id, ticketType.price);
+      await createHotel();
+
+      const result = await server.post('/booking').set('Authorization', `Bearer ${token}`).send({ roomId: 1 });
+
+      expect(result.status).toBe(httpStatus.NOT_FOUND);
+    });
+
     it('should respond with status 403 if user ticket is remote', async () => {
       const user = await createUser();
       const token = await generateValidToken(user);
