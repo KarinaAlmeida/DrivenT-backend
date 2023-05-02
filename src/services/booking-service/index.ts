@@ -4,7 +4,7 @@ import bookingRepository from '@/repositories/booking-repository';
 import { notFoundError } from '@/errors';
 import { forbiddenError } from '@/errors/forbidden-required-error';
 
-async function roomAvailable(roomId: number) {
+async function roomAvailable(roomId: number): Promise<Room> {
   const rooms = await bookingRepository.findById(roomId);
   if (!rooms) throw notFoundError();
 
@@ -23,14 +23,14 @@ async function getBooking(id: number): Promise<{ Room: Room; id: number }> {
   return bookings;
 }
 
-async function postBooking(id: number, roomId: number) {
+async function postBooking(id: number, roomId: number): Promise<number> {
   await hotelsService.ticketAndPayment(id);
   await roomAvailable(roomId);
 
   return await bookingRepository.postBooking(id, roomId);
 }
 
-async function updateBooking(id: number, roomId: number, bookingId: number) {
+async function updateBooking(id: number, roomId: number, bookingId: number): Promise<number> {
   const hasBooking = await bookingRepository.getBooking(id);
   if (!hasBooking) throw forbiddenError();
 
